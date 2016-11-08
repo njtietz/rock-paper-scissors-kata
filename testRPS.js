@@ -45,9 +45,29 @@ var tests = {
 		} else {
 			console.log("FAIL");
 		}
+	},
+	scissorsBeatsPaper: function(){
+		// player should win using scissors against paper
+		var game1 = new RPS();
+		game1.playerChooses("scissors");
+		game1.computerChooses("paper");
+		if ("player" == game1.getWinner()) {
+			console.log("PASS");
+		} else {
+			console.log("FAIL");
+		}
+		// computer should win scissors against paper
+		var game2 = new RPS();
+		game2.playerChooses("paper");
+		game2.computerChooses("scissors");
+		if ("computer" == game2.getWinner()) {
+			console.log("PASS");
+		} else {
+			console.log("FAIL");
+		}
 	}
 };
 
 tests.rockBeatsScissors();
 tests.paperBeatsRock();
-
+tests.scissorsBeatsPaper();

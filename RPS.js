@@ -30,4 +30,10 @@ RPS.prototype.getWinner = function(){
 	if (this.computerChoice == "paper" && this.playerChoice == "rock"){
 		return "computer";
 	}
+	if (this.playerChoice == "scissors" && this.computerChoice == "paper"){
+		return "player";
+	}
+	if (this.computerChoice == "scissors" && this.playerChoice == "paper"){
+		return "computer";
+	}
 }
