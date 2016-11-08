@@ -18,6 +18,9 @@ RPS.prototype.computerChooses = function(choice){
 }
 
 RPS.prototype.getWinner = function(){
+	if (this.playerChoice == this.computerChoice){
+		return "draw";
+	}
 	if (this.playerChoice == "rock" && this.computerChoice == "scissors"){
 		return "player";
 	}

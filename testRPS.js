@@ -65,9 +65,39 @@ var tests = {
 		} else {
 			console.log("FAIL");
 		}
+	},
+	sameMoveResultInDraw: function(){
+		// player should draw using rock against rock
+		var game1 = new RPS();
+		game1.playerChooses("rock");
+		game1.computerChooses("rock");
+		if ("draw" == game1.getWinner()) {
+			console.log("PASS");
+		} else {
+			console.log("FAIL");
+		}
+		// player should draw using scissors against scissors
+		var game2 = new RPS();
+		game2.playerChooses("scissors");
+		game2.computerChooses("scissors");
+		if ("draw" == game2.getWinner()) {
+			console.log("PASS");
+		} else {
+			console.log("FAIL");
+		}
+		// player should draw using paper against paper
+		var game2 = new RPS();
+		game2.playerChooses("paper");
+		game2.computerChooses("paper");
+		if ("draw" == game2.getWinner()) {
+			console.log("PASS");
+		} else {
+			console.log("FAIL");
+		}
 	}
 };
 
 tests.rockBeatsScissors();
 tests.paperBeatsRock();
 tests.scissorsBeatsPaper();
+tests.sameMoveResultInDraw();
